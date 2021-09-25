@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "435640869640",
+    "project_id": "home-tag-system",
+    "storage_bucket": "home-tag-system.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435640869640:android:0944cbc8ab9f854c4942bd",
+        "android_client_info": {
+          "package_name": "com.example.firebaserfid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435640869640-i5fsdjajl6brjndoc5fc3joc755ue5gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAge-ZJ8O2egPAP5HsYxkeOKrBj9bvFGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435640869640-i5fsdjajl6brjndoc5fc3joc755ue5gc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435640869640:android:959a84dc27f9da8e4942bd",
+        "android_client_info": {
+          "package_name": "com.example.rfidappv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435640869640-i5fsdjajl6brjndoc5fc3joc755ue5gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAge-ZJ8O2egPAP5HsYxkeOKrBj9bvFGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435640869640-i5fsdjajl6brjndoc5fc3joc755ue5gc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435640869640:android:7782d0f85ac2f7264942bd",
+        "android_client_info": {
+          "package_name": "com.example.tutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "435640869640-i5fsdjajl6brjndoc5fc3joc755ue5gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAge-ZJ8O2egPAP5HsYxkeOKrBj9bvFGk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "435640869640-i5fsdjajl6brjndoc5fc3joc755ue5gc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
