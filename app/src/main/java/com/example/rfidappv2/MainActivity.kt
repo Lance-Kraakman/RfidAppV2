@@ -3,8 +3,13 @@ package com.example.rfidappv2
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.activity.viewModels
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -12,15 +17,19 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.rfidappv2.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 
+import com.example.rfidappv2.ui.about.AboutViewModel
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private val aboutViewModel: AboutViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
 
         val navView: BottomNavigationView = binding.navView
 
@@ -34,6 +43,9 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+
     }
 
     public fun addDevicePage(view: View) { // You have to parse view to register as a event as it is parsed as an arg for the function
@@ -53,6 +65,9 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this, Login::class.java))
     }
 
+    fun displayDevices(layout: LinearLayout) {
+        val txtName = TextView(this@MainActivity)
+    }
 
 
 

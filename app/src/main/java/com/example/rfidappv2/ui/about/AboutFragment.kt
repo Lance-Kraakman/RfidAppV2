@@ -12,7 +12,7 @@ import com.example.rfidappv2.databinding.FragmentAboutBinding
 
 class AboutFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: AboutViewModel
+    lateinit var notificationsViewModel: AboutViewModel
     private var _binding: FragmentAboutBinding? = null
 
     // This property is only valid between onCreateView and
@@ -30,10 +30,11 @@ class AboutFragment : Fragment() {
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
+        val textView: TextView = binding.textNotifications // 'creates a binding'
         notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+            textView.text = it //u Creating a textView variable as an observer -> Copy this in our mainActivity and this should be how to do the live data thingy
         })
+        notificationsViewModel.insert()
         return root
     }
 
