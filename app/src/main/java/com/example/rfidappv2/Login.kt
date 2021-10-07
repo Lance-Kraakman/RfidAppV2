@@ -10,7 +10,13 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import com.example.rfidappv2.models.Device
+import com.example.rfidappv2.models.Station
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class Login : AppCompatActivity() {
 
@@ -54,21 +60,42 @@ class Login : AppCompatActivity() {
             }
 
             progressBarLogin.visibility = View.VISIBLE
-            fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener({
+            fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                 if (it.isSuccessful) {
                     progressBarLogin.visibility = View.INVISIBLE
                     Toast.makeText(this@Login, "Login Success", Toast.LENGTH_SHORT).show();
-                    startActivity(Intent(this, MainActivity::class.java)) // Now we go to main navagation instead of
-                }
-                else {
+                    setupDatabaseForUser()
+                    startActivity(
+                        Intent(
+                            this,
+                            MainActivity::class.java
+                        )
+                    ) // Now we go to main navagation instead of
+                } else {
                     progressBarLogin.visibility = View.INVISIBLE
-                    Toast.makeText(this, "Error! " + it.exception.toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "Error! " + it.exception.toString(), Toast.LENGTH_SHORT)
+                        .show();
                 }
-            })
+            }
         })
     }
 
     public fun registerView(view : View) {
         startActivity(Intent(this, Register::class.java))
     }
+    lateinit var mDb: FirebaseDatabase;
+    private fun setupDatabaseForUser() {
+        mDb = FirebaseDatabase.getInstance()
+        val mRef = mDb.getReference()
+       // progressBar.visibility = View.VISIBLE;
+
+        fAuth.currentUser?.uid?.let { mRef.child("stations").child(it).push().setValue(Station("test","test","test","test","test")) }
+        fAuth.currentUser?.uid?.let { mRef.child("device").child(it).push().setValue(Device("test","test","test","test","test","testdevice","demm","testkd","est")) }
+
+
+    }
+
+
+
+    //
 }
