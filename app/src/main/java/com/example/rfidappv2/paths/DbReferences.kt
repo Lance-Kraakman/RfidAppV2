@@ -1,8 +1,8 @@
 package com.example.rfidappv2.paths
 
-class DbReferences {
+public class DbReferences {
 
-    var  userRef:String? = "users"
-     var stationRef:String? = "stations"
-     var deviceRef:String? = "devices"
+  public  var  userRef:String? = "users"
+  public   var stationRef:String? = "stations"
+    public var deviceRef:String? = "devices"
 }

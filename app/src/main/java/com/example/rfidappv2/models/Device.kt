@@ -32,4 +32,6 @@ class Device {
         this.is_register = is_register
         this.time_update_esp = time_update_esp
     }
+
+    constructor()
 }

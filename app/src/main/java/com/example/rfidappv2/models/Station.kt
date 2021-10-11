@@ -9,6 +9,8 @@ class Station {
         this.width = width
     }
 
+    constructor()
+
     lateinit var id: String
     lateinit var uuid: String
     lateinit var name: String

@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Intellix_Projects/Freelancer/Upwork/RfidAppV2/app/src/main/res/layout/activity_add_device.xml" value="0.20416666666666666" />
         <entry key="..\:/Intellix_Projects/Freelancer/Upwork/RfidAppV2/app/src/main/res/layout/activity_add_station.xml" value="0.20102564102564102" />
         <entry key="..\:/Intellix_Projects/Freelancer/Upwork/RfidAppV2/app/src/main/res/layout/activity_register2.xml" value="0.20555555555555555" />
+        <entry key="..\:/Intellix_Projects/Freelancer/Upwork/RfidAppV2/app/src/main/res/layout/fragment_home.xml" value="0.5" />
         <entry key="..\:/Users/lance/AndroidStudioProjects/RfidAppV2/app/src/main/res/layout/activity_add_device.xml" value="0.264" />
         <entry key="..\:/Users/lance/AndroidStudioProjects/RfidAppV2/app/src/main/res/layout/activity_add_station.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/lance/AndroidStudioProjects/RfidAppV2/app/src/main/res/layout/activity_login2.xml" value="0.1" />
