@@ -1,7 +1,7 @@
 package com.example.rfidappv2.models
 
 class Device {
-    lateinit var id: String
+    //  lateinit var id: String
     lateinit var uuid: String
     lateinit var name: String
     lateinit var x_location: String
@@ -12,7 +12,7 @@ class Device {
     lateinit var time_update_esp: String
 
     constructor(
-        id: String,
+        // id: String,
         uuid: String,
         name: String,
         x_location: String,
@@ -22,7 +22,7 @@ class Device {
         is_register: String,
         time_update_esp: String
     ) {
-        this.id = id
+        // this.id = id
         this.uuid = uuid
         this.name = name
         this.x_location = x_location
@@ -34,4 +34,5 @@ class Device {
     }
 
     constructor()
+    constructor(s: String, s1: String, s2: String, s3: String, s4: String, s5: String, s6: String, s7: String, s8: String)
 }

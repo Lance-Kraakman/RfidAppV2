@@ -7,4 +7,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "RfidAppV2"
-include ':app'
+include ':app',':provisioning'

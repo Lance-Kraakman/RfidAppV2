@@ -111,4 +111,24 @@ class FirebaseRepo {
         })
         //empty for now
     }
+
+    fun getLastAddedDevice(userId:String?) : Device? {
+
+        // by limitToLast expecting only last item to retrieve
+        var device: Device? = null
+        mRef.child(userId!!).limitToLast(1).addValueEventListener(object :ValueEventListener{
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for(snap in snapshot.children){
+                     device = snap.getValue(Device::class.java)
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
+        return  device
+    }
 }

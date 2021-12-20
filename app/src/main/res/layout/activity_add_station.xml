@@ -7,6 +7,9 @@
     tools:context=".AddStation">
 
     <ScrollView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="0dp"
@@ -59,21 +62,49 @@
                     app:layout_constraintTop_toBottomOf="@+id/textViewAddDevice"
                     app:layout_constraintVertical_bias="0.069" />
 
-                <EditText
-                    android:id="@+id/editTextDeviceName"
+
+                <LinearLayout
                     android:layout_width="0dp"
+                    android:id="@+id/linear_layout"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="Location/Station Name"
-                    android:inputType="textPersonName"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textViewStationLocation"
-                    app:layout_constraintVertical_bias="0.053" />
+                    app:layout_constraintVertical_bias="0.053"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/editTextStationName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Location/Station Name"
+                        android:inputType="textPersonName"
+                         />
+                    <EditText
+                        android:id="@+id/edit_text_wififssd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Wifi SSID"
+                        android:inputType="text"
+                         />
+                    <EditText
+                        android:id="@+id/edit_text_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="PASSWORD"
+                        android:inputType="textPersonName"
+                         />
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/buttonExitAddStation"
@@ -100,7 +131,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextDeviceName" />
+                    app:layout_constraintTop_toBottomOf="@+id/linear_layout" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>

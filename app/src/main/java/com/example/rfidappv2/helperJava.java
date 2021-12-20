@@ -1,5 +1,9 @@
 package com.example.rfidappv2;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.os.Bundle;
@@ -37,6 +41,7 @@ public class helperJava extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         viewModal.getGetAllListOfDevices(FirebaseAuth.getInstance().getCurrentUser().getUid()).observe(this, new Observer<List<Device>>() {
             @Override
             public void onChanged(List<Device> devices) {
@@ -81,6 +86,16 @@ public class helperJava extends AppCompatActivity {
         float x = ((deviceXLoc) * (containerx)) / station_width;
         float y = ((deviceYLoc) * (containerx)) / station_height;
 
+    }
+
+    private void startIntent(Context context){
+        Intent i  = new Intent(context,AddDevice.class);
+        context.startActivity(i);
+    }
+    private void loadingDailog(){
+        ProgressDialog dialog = new ProgressDialog(this);
+        dialog.setMessage("Please push add device button on nearest station");
+        dialog.show();
     }
 }
 

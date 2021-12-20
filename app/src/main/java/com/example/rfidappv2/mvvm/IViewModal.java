@@ -55,4 +55,7 @@ public class IViewModal extends ViewModel {
     public void removeDevice(String userKey, Device device) {
         this.repo.removeDevice(userKey, device);
     }
+    public Device getLastAddedDevice(String userkey){
+       return this.repo.getLastAddedDevice(userkey);
+    }
 }

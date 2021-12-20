@@ -95,7 +95,4 @@ class Login : AppCompatActivity() {
 
     }
 
-
-
-    //
 }

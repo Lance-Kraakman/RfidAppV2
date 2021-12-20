@@ -17,6 +17,7 @@ import com.example.rfidappv2.Register
 import com.example.rfidappv2.databinding.FragmentHomeBinding
 import com.example.rfidappv2.models.Device
 import com.example.rfidappv2.mvvm.IViewModal
+import com.example.rfidappv2.ui.fragments.DeviceListDialogFragment
 import com.google.firebase.auth.FirebaseAuth
 import java.util.ArrayList
 
@@ -51,7 +52,11 @@ class HomeFragment : Fragment() {
         iViewModal = ViewModelProvider(this)[IViewModal::class.java]
 
         binding.buttonHomeAddDevice.setOnClickListener {
-            iViewModal.addNewDevice(
+            val i = Intent(context, AddDevice::class.java)
+            requireContext()!!.startActivity(i)
+
+
+          /*  iViewModal.addNewDevice(
                 FirebaseAuth.getInstance().currentUser?.uid,
                 Device(
                     "demo1",
@@ -64,15 +69,17 @@ class HomeFragment : Fragment() {
                     "lorem",
                     "lu"
                 )
-            )
+            )*/
         }
         binding.buttonHomeMyDevices.setOnClickListener {
+
+            DeviceListDialogFragment.newInstance(0).show(requireActivity().supportFragmentManager, "dialog");
             //getist of all devices
-            iViewModal.getGetAllListOfDevices(FirebaseAuth.getInstance().currentUser!!.uid)
+           /* iViewModal.getGetAllListOfDevices(FirebaseAuth.getInstance().currentUser!!.uid)
                 .observe(viewLifecycleOwner,
                     Observer<List<Device?>?> {
                         Log.d("TAG", "onViewCreated: all device" + it.size)
-                    })
+                    })*/
         }
         binding.buttonHomeRemoveDevice.setOnClickListener {
 
